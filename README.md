@@ -11,7 +11,7 @@ by Pang.J.G
     "env": "local",
     "prefix": "tms.",
     "hashLen": 10,
-    "cdnDomain": "tmstatics.shenba.com"
+    "cdnDomain": "tmstatics.xxx.com"
 }
 
 ```
