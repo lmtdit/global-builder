@@ -24,7 +24,7 @@ CleanCSS = require 'clean-css'
 through2 = require 'through2'
 imagemin = require 'imagemin-pngquant'
 # 设置
-_cfg ={}
+_cfg = {}
 try
     _cfg = require './config.json'
 catch e
