@@ -32,6 +32,8 @@ gulp -T  # 查看gulp支持的任务
 ### 开发和发布
 
 ```
+gulp init  # 初始化项目
+
 gulp  # 进入开发状态
 
 gulp --e test # 发布test
