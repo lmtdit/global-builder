@@ -105,8 +105,6 @@ opts.env !== 'www' && (opts.comboDomain = "//" + opts.env + "." + opts.cdn);
 
 opts.mapPath = path.join(opts.distPath, 'globalMap.json');
 
-log(opts);
-
 global.Cache = {};
 
 global.Cache['cssMap'] = {};
@@ -232,7 +230,7 @@ Tools = {
     return path.format(parse);
   },
   _setDistPath: function(parse, hash) {
-    parse.base = opts.prefix + parse.name + "." + hash.substring(0, opts.hashLen) + parse.ext;
+    parse.base = opts.prefix + parse.name + "." + hash.substring(0, opts.hash) + parse.ext;
     return path.format(parse);
   },
   _setSrcPath: function(parse) {

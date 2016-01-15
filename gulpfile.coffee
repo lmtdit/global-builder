@@ -77,7 +77,7 @@ opts = _.assign({},argv,_opt)
 opts.env = argv.e
 opts.env isnt 'www' && opts.comboDomain = "//#{opts.env}.#{opts.cdn}"
 opts.mapPath = path.join(opts.distPath,'globalMap.json')
-log(opts)
+# log(opts)
 
 # 定义缓存
 global.Cache = {}
@@ -196,7 +196,7 @@ Tools =
         return path.format(parse)
     # 生成 dist 文件路径
     _setDistPath: (parse,hash)->
-        parse.base = opts.prefix + parse.name + "." + hash.substring(0,opts.hashLen) + parse.ext
+        parse.base = opts.prefix + parse.name + "." + hash.substring(0,opts.hash) + parse.ext
         return path.format(parse)
 
     # 生成带有标志前缀的文件路径
@@ -261,7 +261,7 @@ Tools =
             global.Cache[_type + "Map"][relative] = 
                 hash: _hash
                 distPath: _distPath
-                # source: _contents
+                
             return callback(null,file)
 
     # 处理css和js的pipe管道对象
@@ -293,7 +293,6 @@ Tools =
             global.Cache[_type + "Map"][relative] = 
                 hash: _hash
                 distPath: _distPath
-                # source: _contents
 
             return callback(null,file)
 
